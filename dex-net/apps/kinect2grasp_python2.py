@@ -12,10 +12,10 @@ import rospy
 from sensor_msgs.msg import PointCloud2
 from visualization_msgs.msg import MarkerArray
 from visualization_msgs.msg import Marker
-from gpd.msg import GraspConfig
-from gpd.msg import GraspConfigList
+#from gpd.msg import GraspConfig
+#from gpd.msg import GraspConfigList
 import tf
-import moveit_commander
+#import moveit_commander
 
 import numpy as np
 import pointclouds

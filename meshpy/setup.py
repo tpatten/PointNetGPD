@@ -32,7 +32,7 @@ setup(name='meshpy',
     package_dir = {'': '.'},
     packages=['meshpy'],
     #ext_modules = [meshrender],
-    install_requires=requirements,
+    #install_requires=requirements,
     test_suite='test',
     cmdclass={
         'install': PostInstallCmd,

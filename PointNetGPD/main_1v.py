@@ -53,6 +53,7 @@ thresh_good=0.6
 thresh_bad=0.6
 point_channel=3
 
+'''
 train_loader = torch.utils.data.DataLoader(
     PointGraspOneViewDataset(
         grasp_points_num=grasp_points_num,
@@ -68,7 +69,7 @@ train_loader = torch.utils.data.DataLoader(
     shuffle=True,
     worker_init_fn=worker_init_fn,
     collate_fn=my_collate,
-)
+)'''
 
 test_loader = torch.utils.data.DataLoader(
     PointGraspOneViewDataset(

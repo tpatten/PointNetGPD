@@ -38,6 +38,6 @@ setup(name='dex-net',
       author_email='jmahler@berkeley.edu',
       package_dir = {'': 'src'},
       packages=['dexnet'],
-      install_requires=requirements,
+      #install_requires=requirements,
       test_suite='test'
      )

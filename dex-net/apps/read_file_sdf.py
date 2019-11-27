@@ -50,17 +50,17 @@ def generate_obj_from_ply(file_name_):
 
 
 if __name__ == '__main__':
-    home_dir = os.environ['HOME']
-    file_dir = home_dir + "/dataset/ycb_meshes_google/objects"  # for google ycb
+    home_dir = '/home/tpatten' #os.environ['HOME']
+    file_dir = home_dir + "/Data/ycb_meshes_google/objects"  # for google ycb
     # file_dir = home_dir + "/dataset/ycb_meshes"  # for low quality ycb
-    path_sdfgen = home_dir + "/code/grasp-pointnet/SDFGen/bin/SDFGen"
+    path_sdfgen = home_dir + "/container_catkin_ws/src/grasp-pointnet/SDFGen/bin/SDFGen"
     file_list_all = get_file_name(file_dir)
     object_numbers = file_list_all.__len__()
 
     # generate obj from ply file
-    for i in file_list_all:
-         generate_obj_from_ply(i+"/google_512k/nontextured.ply")
-         print("finish", i)
+    #for i in file_list_all:
+    #     generate_obj_from_ply(i+"/google_512k/nontextured.ply")
+    #     print("finish", i)
     # The operation for the multi core
     cores = multiprocessing.cpu_count()
     pool = multiprocessing.Pool(processes=cores)

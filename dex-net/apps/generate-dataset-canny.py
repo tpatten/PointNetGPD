@@ -57,9 +57,9 @@ def worker(i, sample_nums, grasp_amount, good_grasp):
     object_name = file_list_all[i][len(home_dir) + 35:]
     print('a worker of task {} start'.format(object_name))
 
-    yaml_config = YamlConfig(home_dir + "/code/grasp-pointnet/dex-net/test/config.yaml")
+    yaml_config = YamlConfig(home_dir + "/container_catkin_ws/src/grasp-pointnet/dex-net/test/config.yaml")
     gripper_name = 'robotiq_85'
-    gripper = RobotGripper.load(gripper_name, home_dir + "/code/grasp-pointnet/dex-net/data/grippers")
+    gripper = RobotGripper.load(gripper_name, home_dir + "/container_catkin_ws/src/grasp-pointnet/dex-net/data/grippers")
     grasp_sample_method = "antipodal"
     if grasp_sample_method == "uniform":
         ags = UniformGraspSampler(gripper, yaml_config)
@@ -147,8 +147,8 @@ if __name__ == '__main__':
         filename_prefix = sys.argv[1]
     else:
         filename_prefix = "default"
-    home_dir = os.environ['HOME']
-    file_dir = home_dir + "/dataset/ycb_meshes_google/objects"
+    home_dir = '/home/tpatten' #os.environ['HOME']
+    file_dir = home_dir + "/Data/ycb_meshes_google/objects"
     file_list_all = get_file_name(file_dir)
     object_numbers = file_list_all.__len__()
 
